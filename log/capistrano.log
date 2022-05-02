@@ -1,0 +1,678 @@
+# Logfile created on 2022-05-02 20:13:52 +0900 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-05-02 20:13:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [cdea7c90] Running [ -d /usr/local/.rbenv/versions/2.6.6 ] as vpuser@219.94.255.76
+ DEBUG [cdea7c90] Command: [ -d /usr/local/.rbenv/versions/2.6.6 ]
+ DEBUG [cdea7c90] Finished in 4.676 seconds with exit status 0 (successful).
+  INFO [dd713bb7] Running /usr/bin/env mkdir -p /tmp as vpuser@219.94.255.76
+ DEBUG [dd713bb7] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /tmp )
+  INFO [dd713bb7] Finished in 0.433 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-4318e4a26858fd746326.sh 0.0%
+  INFO Uploading /tmp/git-ssh-4318e4a26858fd746326.sh 100.0%
+  INFO [70fc7bc3] Running /usr/bin/env chmod 700 /tmp/git-ssh-4318e4a26858fd746326.sh as vpuser@219.94.255.76
+ DEBUG [70fc7bc3] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env chmod 700 /tmp/git-ssh-4318e4a26858fd746326.sh )
+  INFO [70fc7bc3] Finished in 0.542 seconds with exit status 0 (successful).
+  INFO [be7ec770] Running /usr/bin/env git ls-remote https://github.com/kyokucho1989/simple-record.git HEAD as vpuser@219.94.255.76
+ DEBUG [be7ec770] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env git ls-remote https://github.com/kyokucho1989/simple-record.git HEAD )
+ DEBUG [be7ec770] 	ec5da53045f1dd81c902eea01e3edded0d33d7e8	HEAD
+  INFO [be7ec770] Finished in 1.328 seconds with exit status 0 (successful).
+  INFO [02126433] Running /usr/bin/env mkdir -p /home/vpuser/shared /home/vpuser/releases as vpuser@219.94.255.76
+ DEBUG [02126433] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared /home/vpuser/releases )
+  INFO [02126433] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [b29ef49e] Running /usr/bin/env mkdir -p /home/vpuser/shared/log /home/vpuser/shared/tmp/pids /home/vpuser/shared/tmp/cache /home/vpuser/shared/tmp/sockets /home/vpuser/shared/node_modules /home/vpuser/shared/public/assets as vpuser@219.94.255.76
+ DEBUG [b29ef49e] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared/log /home/vpuser/shared/tmp/pids /home/vpuser/shared/tmp/cache /home/vpuser/shared/tmp/sockets /home/vpuser/shared/node_modules /home/vpuser/shared/public/assets )
+  INFO [b29ef49e] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO [32f35960] Running /usr/bin/env mkdir -p /home/vpuser/shared/config as vpuser@219.94.255.76
+ DEBUG [32f35960] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared/config )
+  INFO [32f35960] Finished in 0.459 seconds with exit status 0 (successful).
+ DEBUG [0cbff4c4] Running [ -f /home/vpuser/shared/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [0cbff4c4] Command: [ -f /home/vpuser/shared/config/master.key ]
+ DEBUG [0cbff4c4] Finished in 0.356 seconds with exit status 0 (successful).
+ DEBUG [3cdd38f2] Running [ -f /home/vpuser/shared/puma.rb ] as vpuser@219.94.255.76
+ DEBUG [3cdd38f2] Command: [ -f /home/vpuser/shared/puma.rb ]
+ DEBUG [3cdd38f2] Finished in 0.359 seconds with exit status 0 (successful).
+ DEBUG [2ba1edbc] Running [ -f /home/vpuser/current/REVISION ] as vpuser@219.94.255.76
+ DEBUG [2ba1edbc] Command: [ -f /home/vpuser/current/REVISION ]
+ DEBUG [2ba1edbc] Finished in 0.409 seconds with exit status 1 (failed).
+ DEBUG [b0ecf5cc] Running [ -f /home/vpuser/repo/HEAD ] as vpuser@219.94.255.76
+ DEBUG [b0ecf5cc] Command: [ -f /home/vpuser/repo/HEAD ]
+ DEBUG [b0ecf5cc] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/vpuser/repo
+ DEBUG [0a9fd033] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [0a9fd033] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [0a9fd033] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [6ab35e0f] Running /usr/bin/env git remote set-url origin https://github.com/kyokucho1989/simple-record.git as vpuser@219.94.255.76
+ DEBUG [6ab35e0f] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env git remote set-url origin https://github.com/kyokucho1989/simple-record.git )
+  INFO [6ab35e0f] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [aae1bc51] Running /usr/bin/env git remote update --prune as vpuser@219.94.255.76
+ DEBUG [aae1bc51] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [aae1bc51] 	Fetching origin
+  INFO [aae1bc51] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [0dd68a46] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [0dd68a46] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [0dd68a46] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [dd77bc08] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402 as vpuser@219.94.255.76
+ DEBUG [dd77bc08] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402 )
+  INFO [dd77bc08] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [97c48e6b] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/vpuser/releases/20220502111402 as vpuser@219.94.255.76
+ DEBUG [97c48e6b] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/vpuser/releases/20220502111402 )
+  INFO [97c48e6b] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [e47d259d] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [e47d259d] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [e47d259d] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [05e7e697] Running /usr/bin/env git rev-list --max-count=1 main as vpuser@219.94.255.76
+ DEBUG [05e7e697] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4318e4a26858fd746326.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [05e7e697] 	ec5da53045f1dd81c902eea01e3edded0d33d7e8
+ DEBUG [05e7e697] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [cc41da48] Running if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [cc41da48] Command: if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi
+ DEBUG [cc41da48] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [ca15c20a] Running /usr/bin/env echo "ec5da53045f1dd81c902eea01e3edded0d33d7e8" > REVISION as vpuser@219.94.255.76
+ DEBUG [ca15c20a] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env echo "ec5da53045f1dd81c902eea01e3edded0d33d7e8" > REVISION )
+  INFO [ca15c20a] Finished in 0.345 seconds with exit status 0 (successful).
+  INFO [ba4d331d] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402/config as vpuser@219.94.255.76
+ DEBUG [ba4d331d] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402/config )
+  INFO [ba4d331d] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [f2db4cc2] Running [ -L /home/vpuser/releases/20220502111402/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [f2db4cc2] Command: [ -L /home/vpuser/releases/20220502111402/config/master.key ]
+ DEBUG [f2db4cc2] Finished in 0.325 seconds with exit status 1 (failed).
+ DEBUG [29f628f0] Running [ -f /home/vpuser/releases/20220502111402/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [29f628f0] Command: [ -f /home/vpuser/releases/20220502111402/config/master.key ]
+ DEBUG [29f628f0] Finished in 0.325 seconds with exit status 1 (failed).
+  INFO [ec770284] Running /usr/bin/env ln -s /home/vpuser/shared/config/master.key /home/vpuser/releases/20220502111402/config/master.key as vpuser@219.94.255.76
+ DEBUG [ec770284] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/config/master.key /home/vpuser/releases/20220502111402/config/master.key )
+  INFO [ec770284] Finished in 0.421 seconds with exit status 0 (successful).
+  INFO [1166fb21] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402 /home/vpuser/releases/20220502111402/tmp /home/vpuser/releases/20220502111402/public as vpuser@219.94.255.76
+ DEBUG [1166fb21] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111402 /home/vpuser/releases/20220502111402/tmp /home/vpuser/releases/20220502111402/public )
+  INFO [1166fb21] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [6479165b] Running [ -L /home/vpuser/releases/20220502111402/log ] as vpuser@219.94.255.76
+ DEBUG [6479165b] Command: [ -L /home/vpuser/releases/20220502111402/log ]
+ DEBUG [6479165b] Finished in 0.332 seconds with exit status 1 (failed).
+ DEBUG [5b9c175a] Running [ -d /home/vpuser/releases/20220502111402/log ] as vpuser@219.94.255.76
+ DEBUG [5b9c175a] Command: [ -d /home/vpuser/releases/20220502111402/log ]
+ DEBUG [5b9c175a] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [c3e1ed6d] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111402/log as vpuser@219.94.255.76
+ DEBUG [c3e1ed6d] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111402/log )
+  INFO [c3e1ed6d] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [eea12610] Running /usr/bin/env ln -s /home/vpuser/shared/log /home/vpuser/releases/20220502111402/log as vpuser@219.94.255.76
+ DEBUG [eea12610] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/log /home/vpuser/releases/20220502111402/log )
+  INFO [eea12610] Finished in 0.344 seconds with exit status 0 (successful).
+ DEBUG [c3355e65] Running [ -L /home/vpuser/releases/20220502111402/tmp/pids ] as vpuser@219.94.255.76
+ DEBUG [c3355e65] Command: [ -L /home/vpuser/releases/20220502111402/tmp/pids ]
+ DEBUG [c3355e65] Finished in 0.290 seconds with exit status 1 (failed).
+ DEBUG [8857b04c] Running [ -d /home/vpuser/releases/20220502111402/tmp/pids ] as vpuser@219.94.255.76
+ DEBUG [8857b04c] Command: [ -d /home/vpuser/releases/20220502111402/tmp/pids ]
+ DEBUG [8857b04c] Finished in 0.321 seconds with exit status 0 (successful).
+  INFO [2ca2b5cf] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111402/tmp/pids as vpuser@219.94.255.76
+ DEBUG [2ca2b5cf] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111402/tmp/pids )
+  INFO [2ca2b5cf] Finished in 0.373 seconds with exit status 0 (successful).
+  INFO [bbc5e09c] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/pids /home/vpuser/releases/20220502111402/tmp/pids as vpuser@219.94.255.76
+ DEBUG [bbc5e09c] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/pids /home/vpuser/releases/20220502111402/tmp/pids )
+  INFO [bbc5e09c] Finished in 0.358 seconds with exit status 0 (successful).
+ DEBUG [8a373c07] Running [ -L /home/vpuser/releases/20220502111402/tmp/cache ] as vpuser@219.94.255.76
+ DEBUG [8a373c07] Command: [ -L /home/vpuser/releases/20220502111402/tmp/cache ]
+ DEBUG [8a373c07] Finished in 0.401 seconds with exit status 1 (failed).
+ DEBUG [fc60e586] Running [ -d /home/vpuser/releases/20220502111402/tmp/cache ] as vpuser@219.94.255.76
+ DEBUG [fc60e586] Command: [ -d /home/vpuser/releases/20220502111402/tmp/cache ]
+ DEBUG [fc60e586] Finished in 0.288 seconds with exit status 1 (failed).
+  INFO [dcf0f1fd] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/cache /home/vpuser/releases/20220502111402/tmp/cache as vpuser@219.94.255.76
+ DEBUG [dcf0f1fd] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/cache /home/vpuser/releases/20220502111402/tmp/cache )
+  INFO [dcf0f1fd] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [e162f687] Running [ -L /home/vpuser/releases/20220502111402/tmp/sockets ] as vpuser@219.94.255.76
+ DEBUG [e162f687] Command: [ -L /home/vpuser/releases/20220502111402/tmp/sockets ]
+ DEBUG [e162f687] Finished in 0.312 seconds with exit status 1 (failed).
+ DEBUG [b3ac0fe6] Running [ -d /home/vpuser/releases/20220502111402/tmp/sockets ] as vpuser@219.94.255.76
+ DEBUG [b3ac0fe6] Command: [ -d /home/vpuser/releases/20220502111402/tmp/sockets ]
+ DEBUG [b3ac0fe6] Finished in 0.339 seconds with exit status 1 (failed).
+  INFO [17e6b6d9] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/sockets /home/vpuser/releases/20220502111402/tmp/sockets as vpuser@219.94.255.76
+ DEBUG [17e6b6d9] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/sockets /home/vpuser/releases/20220502111402/tmp/sockets )
+  INFO [17e6b6d9] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [3e062035] Running [ -L /home/vpuser/releases/20220502111402/node_modules ] as vpuser@219.94.255.76
+ DEBUG [3e062035] Command: [ -L /home/vpuser/releases/20220502111402/node_modules ]
+ DEBUG [3e062035] Finished in 0.278 seconds with exit status 1 (failed).
+ DEBUG [08ed80e2] Running [ -d /home/vpuser/releases/20220502111402/node_modules ] as vpuser@219.94.255.76
+ DEBUG [08ed80e2] Command: [ -d /home/vpuser/releases/20220502111402/node_modules ]
+ DEBUG [08ed80e2] Finished in 0.246 seconds with exit status 1 (failed).
+  INFO [915601bf] Running /usr/bin/env ln -s /home/vpuser/shared/node_modules /home/vpuser/releases/20220502111402/node_modules as vpuser@219.94.255.76
+ DEBUG [915601bf] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/node_modules /home/vpuser/releases/20220502111402/node_modules )
+  INFO [915601bf] Finished in 0.206 seconds with exit status 0 (successful).
+ DEBUG [4657375e] Running [ -L /home/vpuser/releases/20220502111402/public/assets ] as vpuser@219.94.255.76
+ DEBUG [4657375e] Command: [ -L /home/vpuser/releases/20220502111402/public/assets ]
+ DEBUG [4657375e] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [9666019d] Running [ -d /home/vpuser/releases/20220502111402/public/assets ] as vpuser@219.94.255.76
+ DEBUG [9666019d] Command: [ -d /home/vpuser/releases/20220502111402/public/assets ]
+ DEBUG [9666019d] Finished in 0.237 seconds with exit status 1 (failed).
+  INFO [b5d73f4a] Running /usr/bin/env ln -s /home/vpuser/shared/public/assets /home/vpuser/releases/20220502111402/public/assets as vpuser@219.94.255.76
+ DEBUG [b5d73f4a] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/public/assets /home/vpuser/releases/20220502111402/public/assets )
+  INFO [b5d73f4a] Finished in 0.395 seconds with exit status 0 (successful).
+ DEBUG [2bc1d518] Running if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [2bc1d518] Command: if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi
+ DEBUG [2bc1d518] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [75427170] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local deployment true as vpuser@219.94.255.76
+ DEBUG [75427170] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [75427170] Finished in 5.045 seconds with exit status 0 (successful).
+  INFO [b7460260] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local path /home/vpuser/shared/bundle as vpuser@219.94.255.76
+ DEBUG [b7460260] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local path /home/vpuser/shared/bundle )
+  INFO [b7460260] Finished in 0.881 seconds with exit status 0 (successful).
+  INFO [ba95859a] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local without development:test as vpuser@219.94.255.76
+ DEBUG [ba95859a] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [ba95859a] Finished in 0.871 seconds with exit status 0 (successful).
+ DEBUG [a642c62a] Running if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [a642c62a] Command: if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi
+ DEBUG [a642c62a] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [34efae74] Running /usr/local/.rbenv/bin/rbenv exec bundle check as vpuser@219.94.255.76
+ DEBUG [34efae74] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [34efae74] 	The Gemfile's dependencies are satisfied
+ DEBUG [34efae74] Finished in 1.423 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [3e45d30b] Running if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [3e45d30b] Command: if test ! -d /home/vpuser/releases/20220502111402; then echo "Directory does not exist '/home/vpuser/releases/20220502111402'" 1>&2; false; fi
+ DEBUG [3e45d30b] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [a8210bc3] Running /usr/local/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as vpuser@219.94.255.76
+ DEBUG [a8210bc3] Command: cd /home/vpuser/releases/20220502111402 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-05-02 20:15:11 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7d1df985] Running [ -d /usr/local/.rbenv/versions/2.6.6 ] as vpuser@219.94.255.76
+ DEBUG [7d1df985] Command: [ -d /usr/local/.rbenv/versions/2.6.6 ]
+ DEBUG [7d1df985] Finished in 3.852 seconds with exit status 0 (successful).
+  INFO [4220a4b0] Running /usr/bin/env mkdir -p /tmp as vpuser@219.94.255.76
+ DEBUG [4220a4b0] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4220a4b0] Finished in 0.343 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-2fdd0dfcda660a07c2b9.sh 0.0%
+  INFO Uploading /tmp/git-ssh-2fdd0dfcda660a07c2b9.sh 100.0%
+  INFO [6f0751d0] Running /usr/bin/env chmod 700 /tmp/git-ssh-2fdd0dfcda660a07c2b9.sh as vpuser@219.94.255.76
+ DEBUG [6f0751d0] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env chmod 700 /tmp/git-ssh-2fdd0dfcda660a07c2b9.sh )
+  INFO [6f0751d0] Finished in 0.431 seconds with exit status 0 (successful).
+  INFO [546b5bc5] Running /usr/bin/env git ls-remote https://github.com/kyokucho1989/sakura-test-app.git HEAD as vpuser@219.94.255.76
+ DEBUG [546b5bc5] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env git ls-remote https://github.com/kyokucho1989/sakura-test-app.git HEAD )
+ DEBUG [546b5bc5] 	65cf9b60aceb128eec12bad27e26545e42a5d0d8	HEAD
+  INFO [546b5bc5] Finished in 1.418 seconds with exit status 0 (successful).
+  INFO [2b23b2e6] Running /usr/bin/env mkdir -p /home/vpuser/shared /home/vpuser/releases as vpuser@219.94.255.76
+ DEBUG [2b23b2e6] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared /home/vpuser/releases )
+  INFO [2b23b2e6] Finished in 0.466 seconds with exit status 0 (successful).
+  INFO [84be9b91] Running /usr/bin/env mkdir -p /home/vpuser/shared/log /home/vpuser/shared/tmp/pids /home/vpuser/shared/tmp/cache /home/vpuser/shared/tmp/sockets /home/vpuser/shared/node_modules /home/vpuser/shared/public/assets as vpuser@219.94.255.76
+ DEBUG [84be9b91] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared/log /home/vpuser/shared/tmp/pids /home/vpuser/shared/tmp/cache /home/vpuser/shared/tmp/sockets /home/vpuser/shared/node_modules /home/vpuser/shared/public/assets )
+  INFO [84be9b91] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [6eb3686d] Running /usr/bin/env mkdir -p /home/vpuser/shared/config as vpuser@219.94.255.76
+ DEBUG [6eb3686d] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/shared/config )
+  INFO [6eb3686d] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG [e3f01d93] Running [ -f /home/vpuser/shared/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [e3f01d93] Command: [ -f /home/vpuser/shared/config/master.key ]
+ DEBUG [e3f01d93] Finished in 0.345 seconds with exit status 0 (successful).
+ DEBUG [be0ee543] Running [ -f /home/vpuser/shared/puma.rb ] as vpuser@219.94.255.76
+ DEBUG [be0ee543] Command: [ -f /home/vpuser/shared/puma.rb ]
+ DEBUG [be0ee543] Finished in 0.303 seconds with exit status 0 (successful).
+ DEBUG [fb82738f] Running [ -f /home/vpuser/current/REVISION ] as vpuser@219.94.255.76
+ DEBUG [fb82738f] Command: [ -f /home/vpuser/current/REVISION ]
+ DEBUG [fb82738f] Finished in 0.304 seconds with exit status 1 (failed).
+ DEBUG [1e27caa5] Running [ -f /home/vpuser/repo/HEAD ] as vpuser@219.94.255.76
+ DEBUG [1e27caa5] Command: [ -f /home/vpuser/repo/HEAD ]
+ DEBUG [1e27caa5] Finished in 0.285 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/vpuser/repo
+ DEBUG [e4f32a13] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [e4f32a13] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [e4f32a13] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [e261b652] Running /usr/bin/env git remote set-url origin https://github.com/kyokucho1989/sakura-test-app.git as vpuser@219.94.255.76
+ DEBUG [e261b652] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env git remote set-url origin https://github.com/kyokucho1989/sakura-test-app.git )
+  INFO [e261b652] Finished in 0.400 seconds with exit status 0 (successful).
+  INFO [db249b1d] Running /usr/bin/env git remote update --prune as vpuser@219.94.255.76
+ DEBUG [db249b1d] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [db249b1d] 	Fetching origin
+ DEBUG [db249b1d] 	From https://github.com/kyokucho1989/sakura-test-app
+ - [deleted]         (none)     -> feature/capistrano
+ - [deleted]         (none)     -> refs/pull/10/head
+ - [deleted]         (none)     -> refs/pull/101/head
+ - [deleted]         (none)     -> refs/pull/102/head
+ - [deleted]         (none)     -> refs/pull/103/head
+ - [deleted]         (none)     -> refs/pull/104/head
+ - [deleted]         (none)     -> refs/pull/105/head
+ - [deleted]         (none)     -> refs/pull/106/head
+ - [deleted]         (none)     -> refs/pull/107/head
+ - [deleted]         (none)     -> refs/pull/108/head
+ - [deleted]         (none)     -> refs/pull/109/head
+ - [deleted]         (none)     -> refs/pull/11/head
+ - [deleted]         (none)     -> refs/pull/110/head
+ - [deleted]         (none)     -> refs/pull/111/head
+ - [deleted]         (none)     -> refs/pull/112/head
+ - [deleted]         (none)     -> refs/pull/113/head
+ - [deleted]         (none)     -> refs/pull/114/head
+ - [deleted]         (none)     -> refs/pull/115/head
+ - [deleted]         (none)     -> refs/pull/117/head
+ - [deleted]         (none)     -> refs/pull/118/head
+ - [deleted]         (none)     -> refs/pull/119/head
+ - [deleted]         (none)     -> refs/pull/12/head
+ - [deleted]         (none)     -> refs/pull/120/head
+ - [deleted]         (none)     -> refs/pull/121/head
+ - [deleted]         (none)     -> refs/pull/122/head
+ - [deleted]         (none)     -> refs/pull/123/head
+ - [deleted]         (none)     -> refs/pull/127/head
+ - [deleted]         (none)     -> refs/pull/128/head
+ - [deleted]         (none)     -> refs/pull/129/head
+ - [deleted]         (none)     -> refs/pull/13/head
+ - [deleted]         (none)     -> refs/pull/130/head
+ - [deleted]         (none)     -> refs/pull/131/head
+ - [deleted]         (none)     -> refs/pull/132/head
+ - [deleted]         (none)     -> refs/pull/133/head
+ - [deleted]         (none)     -> refs/pull/134/head
+ - [deleted]         (none)     -> refs/pull/135/head
+ - [deleted]         (none)     -> refs/pull/14/head
+ - [deleted]         (none)     -> refs/pull/141/head
+ - [deleted]         (none)     -> refs/pull/142/head
+ - [deleted]         (none)     -> refs/pull/143/head
+ - [deleted]         (none)     -> refs/pull/144/head
+ - [deleted]         (none)     -> refs/pull/145/head
+ - [deleted]         (none)     -> refs/pull/146/head
+ - [deleted]         (none)     -> refs/pull/147/head
+ - [deleted]         (none)     -> refs/pull/148/head
+ - [deleted]         (none)     -> refs/pull/149/head
+ - [deleted]         (none)     -> refs/pull/15/head
+ - [deleted]         (none)     -> refs/pull/151/head
+ - [deleted]         (none)     -> refs/pull/153/head
+ - [deleted]         (none)     -> refs/pull/154/head
+ - [deleted]         (none)     -> refs/pull/155/head
+ - [deleted]         (none)     -> refs/pull/156/head
+ - [deleted]         (none)     -> refs/pull/157/head
+ - [deleted]         (none)     -> refs/pull/158/head
+ - [deleted]         (none)     -> refs/pull/16/head
+ - [deleted]         (none)     -> refs/pull/161/head
+ - [deleted]         (none)     -> refs/pull/162/head
+ - [deleted]         (none)     -> refs/pull/163/head
+ - [deleted]         (none)     -> refs/pull/164/head
+ - [deleted]         (none)     -> refs/pull/165/head
+ - [deleted]         (none)     -> refs/pull/166/head
+ - [deleted]         (none)     -> refs/pull/167/head
+ - [deleted]         (none)     -> refs/pull/168/head
+ - [deleted]         (none)     -> refs/pull/169/head
+ - [deleted]         (none)     -> refs/pull/17/head
+ - [deleted]         (none)     -> refs/pull/170/head
+ - [deleted]         (none)     -> refs/pull/171/head
+ - [deleted]         (none)     -> refs/pull/172/head
+ - [deleted]         (none)     -> refs/pull/173/head
+ - [deleted]         (none)     -> refs/pull/175/head
+ - [deleted]         (none)     -> refs/pull/176/head
+ - [deleted]         (none)     -> refs/pull/178/head
+ - [deleted]         (none)     -> refs/pull/179/head
+ - [deleted]         (none)     -> refs/pull/18/head
+ - [deleted]         (none)     -> refs/pull/180/head
+ - [deleted]         (none)     -> refs/pull/181/head
+ - [deleted]         (none)     -> refs/pull/182/head
+ - [deleted]         (none)     -> refs/pull/183/head
+ - [deleted]         (none)     -> refs/pull/184/head
+ - [deleted]         (none)     -> refs/pull/185/head
+ - [deleted]         (none)     -> refs/pull/186/head
+ - [deleted]         (none)     -> refs/pull/187/head
+ - [deleted]         (none)     -> refs/pull/188/head
+ - [deleted]         (none)     -> refs/pull/189/head
+ - [deleted]         (none)     -> refs/pull/19/head
+ - [deleted]         (none)     -> refs/pull/190/head
+ - [deleted]         (none)     -> refs/pull/191/head
+ - [deleted]         (none)     -> refs/pull/193/head
+ - [deleted]         (none)     -> refs/pull/194/head
+ - [deleted]         (none)     -> refs/pull/196/head
+ - [deleted]         (none)     -> refs/pull/197/head
+ - [deleted]         (none)     -> refs/pull/198/head
+ - [deleted]         (none)     -> refs/pull/199/head
+ - [deleted]         (none)     -> refs/pull/20/head
+ - [deleted]         (none)     -> refs/pull/200/head
+ - [deleted]         (none)     -> refs/pull/201/head
+ - [deleted]         (none)     -> refs/pull/202/head
+ - [deleted]         (none)     -> refs/pull/203/head
+ - [deleted]         (none)     -> refs/pull/204/head
+ - [deleted]         (none)     -> refs/pull/205/head
+ - [deleted]         (none)     -> refs/pull/206/head
+ - [deleted]         (none)     -> refs/pull/208/head
+ - [deleted]         (none)     -> refs/pull/209/head
+ - [deleted]         (none)     -> refs/pull/210/head
+ - [deleted]         (none)     -> refs/pull/211/head
+ - [deleted]         (none)     -> refs/pull/212/head
+ - [deleted]         (none)     -> refs/pull/213/head
+ - [deleted]         (none)     -> refs/pull/214/head
+ - [deleted]         (none)     -> refs/pull/215/head
+ - [deleted]         (none)     -> refs/pull/216/head
+ - [deleted]         (none)     -> refs/pull/217/head
+ - [deleted]         (none)     -> refs/pull/218/head
+ - [deleted]         (none)     -> refs/pull/219/head
+ - [deleted]         (none)     -> refs/pull/22/head
+ - [deleted]         (none)     -> refs/pull/220/head
+ - [deleted]         (none)     -> refs/pull/222/head
+ - [deleted]         (none)     -> refs/pull/223/head
+ - [deleted]         (none)     -> refs/pull/224/head
+ - [deleted]         (none)     -> refs/pull/226/head
+ - [deleted]         (none)     -> refs/pull/227/head
+ - [deleted]         (none)     -> refs/pull/228/head
+ - [deleted]         (none)     -> refs/pull/229/head
+ - [deleted]         (none)     -> refs/pull/230/head
+ - [deleted]         (none)     -> refs/pull/231/head
+ - [deleted]         (none)     -> refs/pull/232/head
+ - [deleted]         (none)     -> refs/pull/233/head
+ - [deleted]         (none)     -> refs/pull/234/head
+ - [deleted]         (none)     -> refs/pull/235/head
+ - [deleted]         (none)     -> refs/pull/236/head
+ - [deleted]         (none)     -> refs/pull/237/head
+ - [deleted]         (none)     -> refs/pull/238/head
+ - [deleted]         (none)     -> refs/pull/24/head
+ - [deleted]         (none)     -> refs/pull/240/head
+ - [deleted]         (none)     -> refs/pull/242/head
+ - [deleted]         (none)     -> refs/pull/243/head
+ - [deleted]         (none)     -> refs/pull/244/head
+ - [deleted]         (none)     -> refs/pull/245/head
+ - [deleted]         (none)     -> refs/pull/246/head
+ - [deleted]         (none)     -> refs/pull/247/head
+ - [deleted]         (none)     -> refs/pull/248/head
+ - [deleted]         (none)     -> refs/pull/249/head
+ - [deleted]         (none)     -> refs/pull/25/head
+ - [deleted]         (none)     -> refs/pull/250/head
+ - [deleted]         (none)     -> refs/pull/251/head
+ - [deleted]         (none)     -> refs/pull/252/head
+ - [deleted]         (none)     -> refs/pull/253/head
+ - [deleted]         (none)     -> refs/pull/254/head
+ - [deleted]         (none)     -> refs/pull/255/head
+ - [deleted]         (none)     -> refs/pull/256/head
+ - [deleted]         (none)     -> refs/pull/257/head
+ - [deleted]         (none)     -> refs/pull/258/head
+ - [deleted]         (none)     -> refs/pull/259/head
+ - [deleted]         (none)     -> refs/pull/26/head
+ - [deleted]         (none)     -> refs/pull/260/head
+ - [deleted]         (none)     -> refs/pull/261/head
+ - [deleted]         (none)     -> refs/pull/262/head
+ - [deleted]         (none)     -> refs/pull/263/head
+ - [deleted]         (none)     -> refs/pull/264/head
+ - [deleted]         (none)     -> refs/pull/265/head
+ - [deleted]         (none)     -> refs/pull/266/head
+ - [deleted]         (none)     -> refs/pull/267/head
+ - [deleted]         (none)     -> refs/pull/268/head
+ - [deleted]         (none)     -> refs/pull/269/head
+ - [deleted]         (none)     -> refs/pull/27/head
+ - [deleted]         (none)     -> refs/pull/270/head
+ - [deleted]         (none)     -> refs/pull/271/head
+ - [deleted]         (none)     -> refs/pull/272/head
+ - [deleted]         (none)     -> refs/pull/273/head
+ - [deleted]         (none)     -> refs/pull/274/head
+ - [deleted]         (none)     -> refs/pull/275/head
+ - [deleted]         (none)     -> refs/pull/276/head
+ - [deleted]         (none)     -> refs/pull/277/head
+ - [deleted]         (none)     -> refs/pull/278/head
+ - [deleted]         (none)     -> refs/pull/279/head
+ - [deleted]         (none)     -> refs/pull/28/head
+ - [deleted]         (none)     -> refs/pull/29/head
+ - [deleted]         (none)     -> refs/pull/30/head
+ - [deleted]         (none)     -> refs/pull/31/head
+ - [deleted]         (none)     -> refs/pull/32/head
+ - [deleted]         (none)     -> refs/pull/34/head
+ - [deleted]         (none)     -> refs/pull/35/head
+ - [deleted]         (none)     -> refs/pull/37/head
+ - [deleted]         (none)     -> refs/pull/38/head
+ - [deleted]         (none)     -> refs/pull/39/head
+ - [deleted]         (none)     -> refs/pull/41/head
+ - [deleted]         (none)     -> refs/pull/42/head
+ - [deleted]         (none)     -> refs/pull/43/head
+ - [deleted]         (none)     -> refs/pull/45/head
+ - [deleted]         (none)     -> refs/pull/46/head
+ - [deleted]         (none)     -> refs/pull/48/head
+ - [deleted]         (none)     -> refs/pull/49/head
+ - [deleted]         (none)     -> refs/pull/5/head
+ - [deleted]         (none)     -> refs/pull/50/head
+ - [deleted]         (none)     -> refs/pull/51/head
+ - [deleted]         (none)     -> refs/pull/52/head
+ - [deleted]         (none)     -> refs/pull/54/head
+ - [deleted]         (none)     -> refs/pull/55/head
+ - [deleted]         (none)     -> refs/pull/59/head
+ - [deleted]         (none)     -> refs/pull/6/head
+ - [deleted]         (none)     -> refs/pull/68/head
+ - [deleted]         (none)     -> refs/pull/69/head
+ - [deleted]         (none)     -> refs/pull/7/head
+ - [deleted]         (none)     -> refs/pull/70/head
+ - [deleted]         (none)     -> refs/pull/72/head
+ - [deleted]         (none)     -> refs/pull/73/head
+ - [deleted]         (none)     -> refs/pull/75/head
+ - [deleted]         (none)     -> refs/pull/76/head
+ - [deleted]         (none)     -> refs/pull/77/head
+ - [deleted]         (none)     -> refs/pull/78/head
+ - [deleted]         (none)     -> refs/pull/79/head
+ - [deleted]         (none)     -> refs/pull/8/head
+ - [deleted]         (none)     -> refs/pull/80/head
+ - [deleted]         (none)     -> refs/pull/81/head
+ - [deleted]         (none)     -> refs/pull/83/head
+ - [deleted]         (none)     -> refs/pull/84/head
+ - [deleted]         (none)     -> refs/pull/86/head
+ - [deleted]         (none)     -> refs/pull/87/head
+ - [deleted]         (none)     -> refs/pull/88/head
+ - [deleted]         (none)     -> refs/pull/89/head
+ - [deleted]         (none)     -> refs/pull/9/head
+ - [deleted]         (none)     -> refs/pull/91/head
+ - [deleted]         (none)     -> refs/pull/92/head
+ - [deleted]         (none)     -> refs/pull/93/head
+ - [deleted]         (none)     -> refs/pull/94/head
+ - [deleted]         (none)     -> refs/pull/95/head
+ - [deleted]         (none)     -> refs/pull/96/head
+ - [deleted]         (none)     -> refs/pull/97/head
+ - [deleted]         (none)     -> refs/pull/98/head
+ - [deleted]         (none)     -> refs/pull/99/head
+ DEBUG [db249b1d] 	warning: no common commits
+ DEBUG [db249b1d] 	 + 245e6a05...e2574842 develop          -> develop  (forced update)
+ + ec5da530...65cf9b60 main             -> main  (forced update)
+ + 0796bba4...524e6177 refs/pull/1/head -> refs/pull/1/head  (forced update)
+ * [new ref]         refs/pull/2/head -> refs/pull/2/head
+ * [new ref]         refs/pull/3/head -> refs/pull/3/head
+  INFO [db249b1d] Finished in 7.468 seconds with exit status 0 (successful).
+ DEBUG [ffdf41b4] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [ffdf41b4] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [ffdf41b4] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [7c435d21] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519 as vpuser@219.94.255.76
+ DEBUG [7c435d21] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519 )
+  INFO [7c435d21] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [088cd0d4] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/vpuser/releases/20220502111519 as vpuser@219.94.255.76
+ DEBUG [088cd0d4] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/vpuser/releases/20220502111519 )
+  INFO [088cd0d4] Finished in 5.714 seconds with exit status 0 (successful).
+ DEBUG [67e49edf] Running if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [67e49edf] Command: if test ! -d /home/vpuser/repo; then echo "Directory does not exist '/home/vpuser/repo'" 1>&2; false; fi
+ DEBUG [67e49edf] Finished in 0.144 seconds with exit status 0 (successful).
+ DEBUG [e207580d] Running /usr/bin/env git rev-list --max-count=1 main as vpuser@219.94.255.76
+ DEBUG [e207580d] Command: cd /home/vpuser/repo && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2fdd0dfcda660a07c2b9.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [e207580d] 	65cf9b60aceb128eec12bad27e26545e42a5d0d8
+ DEBUG [e207580d] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [00fdcce0] Running if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [00fdcce0] Command: if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi
+ DEBUG [00fdcce0] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [3e749518] Running /usr/bin/env echo "65cf9b60aceb128eec12bad27e26545e42a5d0d8" > REVISION as vpuser@219.94.255.76
+ DEBUG [3e749518] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env echo "65cf9b60aceb128eec12bad27e26545e42a5d0d8" > REVISION )
+  INFO [3e749518] Finished in 0.296 seconds with exit status 0 (successful).
+  INFO [66f01f14] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519/config as vpuser@219.94.255.76
+ DEBUG [66f01f14] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519/config )
+  INFO [66f01f14] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [3396ddc0] Running [ -L /home/vpuser/releases/20220502111519/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [3396ddc0] Command: [ -L /home/vpuser/releases/20220502111519/config/master.key ]
+ DEBUG [3396ddc0] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [9d582fdc] Running [ -f /home/vpuser/releases/20220502111519/config/master.key ] as vpuser@219.94.255.76
+ DEBUG [9d582fdc] Command: [ -f /home/vpuser/releases/20220502111519/config/master.key ]
+ DEBUG [9d582fdc] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [057b0ce2] Running /usr/bin/env rm /home/vpuser/releases/20220502111519/config/master.key as vpuser@219.94.255.76
+ DEBUG [057b0ce2] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm /home/vpuser/releases/20220502111519/config/master.key )
+  INFO [057b0ce2] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [aa99b9f2] Running /usr/bin/env ln -s /home/vpuser/shared/config/master.key /home/vpuser/releases/20220502111519/config/master.key as vpuser@219.94.255.76
+ DEBUG [aa99b9f2] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/config/master.key /home/vpuser/releases/20220502111519/config/master.key )
+  INFO [aa99b9f2] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [bfe90913] Running /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519 /home/vpuser/releases/20220502111519/tmp /home/vpuser/releases/20220502111519/public as vpuser@219.94.255.76
+ DEBUG [bfe90913] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /home/vpuser/releases/20220502111519 /home/vpuser/releases/20220502111519/tmp /home/vpuser/releases/20220502111519/public )
+  INFO [bfe90913] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [84fba2b3] Running [ -L /home/vpuser/releases/20220502111519/log ] as vpuser@219.94.255.76
+ DEBUG [84fba2b3] Command: [ -L /home/vpuser/releases/20220502111519/log ]
+ DEBUG [84fba2b3] Finished in 0.119 seconds with exit status 1 (failed).
+ DEBUG [982f18ee] Running [ -d /home/vpuser/releases/20220502111519/log ] as vpuser@219.94.255.76
+ DEBUG [982f18ee] Command: [ -d /home/vpuser/releases/20220502111519/log ]
+ DEBUG [982f18ee] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [15e3eee6] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/log as vpuser@219.94.255.76
+ DEBUG [15e3eee6] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/log )
+  INFO [15e3eee6] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [8e114776] Running /usr/bin/env ln -s /home/vpuser/shared/log /home/vpuser/releases/20220502111519/log as vpuser@219.94.255.76
+ DEBUG [8e114776] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/log /home/vpuser/releases/20220502111519/log )
+  INFO [8e114776] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [263b0010] Running [ -L /home/vpuser/releases/20220502111519/tmp/pids ] as vpuser@219.94.255.76
+ DEBUG [263b0010] Command: [ -L /home/vpuser/releases/20220502111519/tmp/pids ]
+ DEBUG [263b0010] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [004dfbb0] Running [ -d /home/vpuser/releases/20220502111519/tmp/pids ] as vpuser@219.94.255.76
+ DEBUG [004dfbb0] Command: [ -d /home/vpuser/releases/20220502111519/tmp/pids ]
+ DEBUG [004dfbb0] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [d8c02282] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/tmp/pids as vpuser@219.94.255.76
+ DEBUG [d8c02282] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/tmp/pids )
+  INFO [d8c02282] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [bfcc1530] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/pids /home/vpuser/releases/20220502111519/tmp/pids as vpuser@219.94.255.76
+ DEBUG [bfcc1530] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/pids /home/vpuser/releases/20220502111519/tmp/pids )
+  INFO [bfcc1530] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [679e8350] Running [ -L /home/vpuser/releases/20220502111519/tmp/cache ] as vpuser@219.94.255.76
+ DEBUG [679e8350] Command: [ -L /home/vpuser/releases/20220502111519/tmp/cache ]
+ DEBUG [679e8350] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [4722f18a] Running [ -d /home/vpuser/releases/20220502111519/tmp/cache ] as vpuser@219.94.255.76
+ DEBUG [4722f18a] Command: [ -d /home/vpuser/releases/20220502111519/tmp/cache ]
+ DEBUG [4722f18a] Finished in 0.205 seconds with exit status 0 (successful).
+  INFO [4199575e] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/tmp/cache as vpuser@219.94.255.76
+ DEBUG [4199575e] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/tmp/cache )
+  INFO [4199575e] Finished in 0.262 seconds with exit status 0 (successful).
+  INFO [248eebfd] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/cache /home/vpuser/releases/20220502111519/tmp/cache as vpuser@219.94.255.76
+ DEBUG [248eebfd] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/cache /home/vpuser/releases/20220502111519/tmp/cache )
+  INFO [248eebfd] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [6c1f6575] Running [ -L /home/vpuser/releases/20220502111519/tmp/sockets ] as vpuser@219.94.255.76
+ DEBUG [6c1f6575] Command: [ -L /home/vpuser/releases/20220502111519/tmp/sockets ]
+ DEBUG [6c1f6575] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [f50dadaf] Running [ -d /home/vpuser/releases/20220502111519/tmp/sockets ] as vpuser@219.94.255.76
+ DEBUG [f50dadaf] Command: [ -d /home/vpuser/releases/20220502111519/tmp/sockets ]
+ DEBUG [f50dadaf] Finished in 0.150 seconds with exit status 1 (failed).
+  INFO [0c49b30a] Running /usr/bin/env ln -s /home/vpuser/shared/tmp/sockets /home/vpuser/releases/20220502111519/tmp/sockets as vpuser@219.94.255.76
+ DEBUG [0c49b30a] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/tmp/sockets /home/vpuser/releases/20220502111519/tmp/sockets )
+  INFO [0c49b30a] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [9c0112ae] Running [ -L /home/vpuser/releases/20220502111519/node_modules ] as vpuser@219.94.255.76
+ DEBUG [9c0112ae] Command: [ -L /home/vpuser/releases/20220502111519/node_modules ]
+ DEBUG [9c0112ae] Finished in 0.170 seconds with exit status 1 (failed).
+ DEBUG [206e7d3a] Running [ -d /home/vpuser/releases/20220502111519/node_modules ] as vpuser@219.94.255.76
+ DEBUG [206e7d3a] Command: [ -d /home/vpuser/releases/20220502111519/node_modules ]
+ DEBUG [206e7d3a] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [dcfb65ba] Running /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/node_modules as vpuser@219.94.255.76
+ DEBUG [dcfb65ba] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /home/vpuser/releases/20220502111519/node_modules )
+  INFO [dcfb65ba] Finished in 1.860 seconds with exit status 0 (successful).
+  INFO [0fbef926] Running /usr/bin/env ln -s /home/vpuser/shared/node_modules /home/vpuser/releases/20220502111519/node_modules as vpuser@219.94.255.76
+ DEBUG [0fbef926] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/node_modules /home/vpuser/releases/20220502111519/node_modules )
+  INFO [0fbef926] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [e4f0b211] Running [ -L /home/vpuser/releases/20220502111519/public/assets ] as vpuser@219.94.255.76
+ DEBUG [e4f0b211] Command: [ -L /home/vpuser/releases/20220502111519/public/assets ]
+ DEBUG [e4f0b211] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [82d18b55] Running [ -d /home/vpuser/releases/20220502111519/public/assets ] as vpuser@219.94.255.76
+ DEBUG [82d18b55] Command: [ -d /home/vpuser/releases/20220502111519/public/assets ]
+ DEBUG [82d18b55] Finished in 0.127 seconds with exit status 1 (failed).
+  INFO [142580ff] Running /usr/bin/env ln -s /home/vpuser/shared/public/assets /home/vpuser/releases/20220502111519/public/assets as vpuser@219.94.255.76
+ DEBUG [142580ff] Command: ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /home/vpuser/shared/public/assets /home/vpuser/releases/20220502111519/public/assets )
+  INFO [142580ff] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [d1059dd1] Running if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [d1059dd1] Command: if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi
+ DEBUG [d1059dd1] Finished in 0.142 seconds with exit status 0 (successful).
+  INFO [d311bd9f] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local deployment true as vpuser@219.94.255.76
+ DEBUG [d311bd9f] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [d311bd9f] Finished in 1.111 seconds with exit status 0 (successful).
+  INFO [f7ce4fbb] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local path /home/vpuser/shared/bundle as vpuser@219.94.255.76
+ DEBUG [f7ce4fbb] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local path /home/vpuser/shared/bundle )
+  INFO [f7ce4fbb] Finished in 0.861 seconds with exit status 0 (successful).
+  INFO [9fb5dee2] Running /usr/local/.rbenv/bin/rbenv exec bundle config --local without development:test as vpuser@219.94.255.76
+ DEBUG [9fb5dee2] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [9fb5dee2] Finished in 1.208 seconds with exit status 0 (successful).
+ DEBUG [b7bf4342] Running if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [b7bf4342] Command: if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi
+ DEBUG [b7bf4342] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [23fe75a0] Running /usr/local/.rbenv/bin/rbenv exec bundle check as vpuser@219.94.255.76
+ DEBUG [23fe75a0] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [23fe75a0] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [23fe75a0] 	The following gems are missing
+ * thor (1.2.1)
+Install missing gems with `bundle install`
+ DEBUG [23fe75a0] Finished in 2.684 seconds with exit status 1 (failed).
+  INFO [3fed98bd] Running /usr/local/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as vpuser@219.94.255.76
+ DEBUG [3fed98bd] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" ; /usr/local/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+  INFO [3fed98bd] Finished in 20.792 seconds with exit status 0 (successful).
+ DEBUG [f2e4c164] Running if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi as vpuser@219.94.255.76
+ DEBUG [f2e4c164] Command: if test ! -d /home/vpuser/releases/20220502111519; then echo "Directory does not exist '/home/vpuser/releases/20220502111519'" 1>&2; false; fi
+ DEBUG [f2e4c164] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [830203c8] Running /usr/local/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as vpuser@219.94.255.76
+ DEBUG [830203c8] Command: cd /home/vpuser/releases/20220502111519 && ( export RBENV_ROOT="/usr/local/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [830203c8] 	rake aborted!
+ActiveSupport::MessageEncryptor::InvalidMessage: ActiveSupport::MessageEncryptor::InvalidMessage
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:206:in `rescue in _decrypt'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:183:in `_decrypt'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:157:in `decrypt_and_verify'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/messages/rotator.rb:21:in `decrypt_and_verify'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_file.rb:80:in `decrypt'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_file.rb:43:in `read'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:21:in `read'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:33:in `config'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:38:in `options'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/core_ext/module/delegation.rb:303:in `method_missing'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:424:in `secret_key_base'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:177:in `key_generator'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/globalid-1.0.0/lib/global_id/railtie.rb:29:in `block (2 levels) in <class:Railtie>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:68:in `block in execute_hook'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:61:in `with_execution_control'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:66:in `execute_hook'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application/finisher.rb:129:in `block in <module:Finisher>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:32:in `instance_exec'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:32:in `run'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:61:in `block in run_initializers'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:60:in `run_initializers'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:363:in `initialize!'
+/home/vpuser/releases/20220502111519/config/environment.rb:5:in `<main>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/zeitwerk-2.5.4/lib/zeitwerk/kernel.rb:35:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:324:in `block in require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:291:in `load_dependency'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:324:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:339:in `require_environment!'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:523:in `block in run_tasks_blocks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/task.rb:61:in `block (2 levels) in define'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+/usr/local/.rbenv/versions/2.6.6/bin/bundle:23:in `load'
+/usr/local/.rbenv/versions/2.6.6/bin/bundle:23:in `<main>'
+
+Caused by:
+OpenSSL::Cipher::CipherError: 
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:201:in `final'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:201:in `_decrypt'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/message_encryptor.rb:157:in `decrypt_and_verify'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/messages/rotator.rb:21:in `decrypt_and_verify'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_file.rb:80:in `decrypt'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_file.rb:43:in `read'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:21:in `read'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:33:in `config'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/encrypted_configuration.rb:38:in `options'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/core_ext/module/delegation.rb:303:in `method_missing'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:424:in `secret_key_base'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:177:in `key_generator'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/globalid-1.0.0/lib/global_id/railtie.rb:29:in `block (2 levels) in <class:Railtie>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:68:in `block in execute_hook'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:61:in `with_execution_control'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:66:in `execute_hook'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application/finisher.rb:129:in `block in <module:Finisher>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:32:in `instance_exec'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:32:in `run'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:61:in `block in run_initializers'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/initializable.rb:60:in `run_initializers'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:363:in `initialize!'
+/home/vpuser/releases/20220502111519/config/environment.rb:5:in `<main>'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/zeitwerk-2.5.4/lib/zeitwerk/kernel.rb:35:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:324:in `block in require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:291:in `load_dependency'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/activesupport-6.0.4.8/lib/active_support/dependencies.rb:324:in `require'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:339:in `require_environment!'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/railties-6.0.4.8/lib/rails/application.rb:523:in `block in run_tasks_blocks'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/task.rb:61:in `block (2 levels) in define'
+/home/vpuser/shared/bundle/ruby/2.6.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+/usr/local/.rbenv/versions/2.6.6/bin/bundle:23:in `load'
+/usr/local/.rbenv/versions/2.6.6/bin/bundle:23:in `<main>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
