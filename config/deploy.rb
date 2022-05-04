@@ -8,6 +8,10 @@ set :branch, ENV['BRANCH'] || "main"
 set :rbenv_custom_path, '/usr/local/.rbenv'
 
 set :deploy_to ,'/home/vpuser'
+
+set :puma_service_unit_name, 'puma.service'
+
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
