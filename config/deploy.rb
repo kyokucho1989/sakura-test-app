@@ -7,7 +7,7 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 set :branch, ENV['BRANCH'] || "main"
 set :rbenv_custom_path, '/usr/local/.rbenv'
 
-set :deploy_to ,'/home/vpuser'
+# set :deploy_to ,'/home/vpuser'
 
 # set :puma_service_unit_name, 'puma.service'
 
@@ -54,16 +54,16 @@ set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
 append :linked_files, "config/master.key"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "node_modules"
 
-namespace :deploy do
+# namespace :deploy do
 
-  namespace :assets do
+#   namespace :assets do
 
-    Rake::Task['deploy:assets:precompile'].clear_actions
+#     Rake::Task['deploy:assets:precompile'].clear_actions
     
-    desc "Precompile assets"
-    task :precompile do
-      puts "-----nothing-------"
-    end
-  end
+#     desc "Precompile assets"
+#     task :precompile do
+#       puts "-----nothing-------"
+#     end
+#   end
 
-end
+# end
